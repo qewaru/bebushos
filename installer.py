@@ -154,7 +154,7 @@ jconfig = {
     },
     "mirror_config": {
       "custom_servers": [],
-      "mirror_regions": { # UPD HERE - mirrors should be changed (check _ for more info about mirrors)
+      "mirror_regions": { # UPD HERE - mirrors should be changed (check https://wiki.archlinux.org/title/Mirrors for more info about mirrors)
         "Sweden": [
             "https://mirror.braindrainlan.nu/archlinux/$repo/os/$arch",
             "http://ftp.myrveln.se/pub/linux/archlinux/$repo/os/$arch",
@@ -200,7 +200,7 @@ jconfig = {
       }
     },
     "swap": False, # UPD HERE - change if needed
-    "timezone": "", # UPD HERE
+    "timezone": "", # fetch_timezones()
     "version": None
 }
 
