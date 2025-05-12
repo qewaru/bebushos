@@ -456,21 +456,21 @@ def switch(name):
             choices[index] = choices[index] + " +"
 
 
-#############################################################################################################
-#                                              Patching archinstall                                         #
-#############################################################################################################
-#   In order to this script to work we need to tweak 2 files - disk_conf and profiles_handler.              #
-#   This can be achieved by moving/inserting lines.                                                         #
-#       1. Circular import error fix:                                                                       #
-#           Without tweak archinstall will crash with error about `circular import` in "disk_conf" script.  #
-#           In order to fix that, script will remove import of `arch_config_handler`, and move it to the    #
-#           function that is using it.                                                                      #
-#       2. Error `name '_' is undefined` fix:                                                               #
-#          Due to specifics of the archinstall code it will load profiles only with TUI, which means that   #
-#          even with config archinstall script will fail to use DE profile. It could be fixed with adding   #
-#          2 lines that are importing `builtins` and setting a "fake" a translation function, so profile    #
-#          will be loaded correctly.                                                                        #
-#############################################################################################################
+################################################################################################################
+#                                              Patching archinstall                                            #
+################################################################################################################
+#   In order for this script to work, we need to tweak 2 files - disk_conf and profiles_handler.               #
+#   This can be achieved by moving/inserting lines:                                                            #
+#       1. Circular import error fix:                                                                          #
+#           Without this tweak, archinstall will crash with an error about a `circular import` in the          #
+#           "disk_conf" script. In order to fix that, the script will remove the import of                     #
+#           `arch_config_handler, and move it into the function that uses it.                                  #
+#       2. Error `name '_' is undefined` fix:                                                                  #
+#          Due to the specifics of the archinstall code, it will load profiles only with the TUI, which        #
+#          means that even with the config, archinstall script will fail to use DE profile. It could be        #
+#          fixed by adding 2 lines that are importing `builtins` and setting a "fake" a translation function,  #
+#          so profile will be loaded correctly.                                                                #
+################################################################################################################
 
 # Archinstall uses different indentation, so this function will find and use it
 def detect_indentation(lines):
