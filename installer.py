@@ -546,13 +546,13 @@ def install():
     patch_archinstall()
     console.print("Pathcing done!")
     
-    # with open('/tmp/user_configuration.json', 'w') as f:
-    #     json.dump(jconfig, f, indent=2)
+    with open('/tmp/user_configuration.json', 'w') as f:
+        json.dump(jconfig, f, indent=2)
 
-    # with open('/tmp/user_credentials.json', 'w') as f:
-    #     json.dump(uconfig, f, indent=2)
+    with open('/tmp/user_credentials.json', 'w') as f:
+        json.dump(uconfig, f, indent=2)
 
-    # subprocess.Popen(['/bin/bash', '-l', '-c', 'archinstall --config /tmp/config.json --creds /tmp/creds.json --silent'])
+    subprocess.Popen(['/bin/bash', '-l', '-c', 'archinstall --config /tmp/config.json --creds /tmp/creds.json --silent'])
 
 def main():
     global console, running
