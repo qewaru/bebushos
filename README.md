@@ -20,6 +20,7 @@ This tools comes pre-installed in custom `Archiso` for BebushOS Linux distro.
   * Installs virtual environment
   * Prepares log file
   * Installs necessary libraries (rich, Babel, questionary)
+
 `installer.py` - main script for installation configuration
   * Initializes JSON config for `archinstall`
   * Fetching necessary data via terminal commands (GPUs, disks, timezones, locales)
