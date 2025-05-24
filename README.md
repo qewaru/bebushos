@@ -23,7 +23,7 @@ This tools comes pre-installed in custom `Archiso` for BebushOS Linux distro.
 
 `installer.py` - main script for installation configuration
   * Initializes JSON config for `archinstall`
-  * Fetching necessary data via terminal commands (GPUs, disks, timezones, locales)
+  * Fetches necessary data via terminal commands (GPUs, disks, timezones, locales)
   * Lets user configure the system
   * Upon finishing configuration, script will tweak `archinstall`, so it will work in silent mode.
 
